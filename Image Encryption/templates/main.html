@@ -1,0 +1,447 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eHospital Systems</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <img src="static/css/logo.jpg" alt="Company Logo">
+            <div class="menu">
+
+
+                  <!-- <a href="#">PATIENT</a> -->
+                  <div class="menu-item">
+                    <a href="{{ url_for('add_patient') }}" class="dropdown-toggle">ADD PATIENT</a>
+                </div>
+                <!-- Link to Search Patient -->
+                <div class="menu-item">
+                    <a href="{{ url_for('search_patient') }}" class="dropdown-toggle">SEARCH PATIENT</a>
+                </div> 
+                <a href="#">ABOUT US</a>
+                <a href="#"><img src="static/css/user.png" alt="User Icon" style="width: 40px; height: 40px;"></a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-text">
+                <h1>eHospital Systems</h1>
+            </div>
+            <div class="hero-image">
+                <img src="static/css/m1.jpg" alt="Doctor pointing at medical icons">
+            </div>
+        </div>
+
+
+
+
+
+
+
+<div class="container">
+   <div class="section">
+    <div class="section-title">
+     Explore our Centres of Clinical Excellence
+    </div>
+    <div class="section-subtitle">
+     GUPTA Hospitals has dedicated Centres of Excellence for several key specialties. They are unique and state of the art facilities spread across several of the GUPTA hospital locations and each Centre of Excellence stands on a foundation of world class clinical outcomes.
+    </div>
+    <div class="image-container">
+     <img alt="Group of doctors standing together" height="400" src="https://t3.ftcdn.net/jpg/02/57/15/02/360_F_257150278_i5rxLktGfKdrgggdX95El658QnDWsV2Q.jpg" width="600"/>
+    </div>
+    <div class="card-container">
+     <div class="card">
+      <img alt="Specialty icon" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQp6mj-volwWhJo0SbDaUouAHmgxzFVUF3tFMDycPFngfmaoYmed3zm8j3EgjEUELL-U4&usqp=CAU" width="200"/>
+      <div class="card-title">
+       Specialty 1
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Specialty icon" height="50" src="https://static.vecteezy.com/system/resources/previews/024/585/326/non_2x/3d-happy-cartoon-doctor-cartoon-doctor-on-transparent-background-generative-ai-png.png" width="500"/>
+      <div class="card-title">
+       Specialty 2
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Specialty icon" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeEQACwMJm3Gta-4gKnj1CzXE873JLBSYqGuK9WSoE-0i0B_6A879NM-KzvRuL3_-5oVY&usqp=CAU" width="50"/>
+      <div class="card-title">
+       Specialty 3
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Specialty icon" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxELJptP9829mY5RRQk8oWjCDYzC_yzaCktrdmKfi1MHD70p9yHVFmmO7BDrd6_jr50wk&usqp=CAU" width="50"/>
+      <div class="card-title">
+       Specialty 4
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Specialty icon" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-DxeBATMXfxE-jA7Tblma3T3Hp26ZSTqLw&s" width="50"/>
+      <div class="card-title">
+       Specialty 5
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Specialty icon" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsNvCw3W1FVohudfLP2BUFM8v1FqCb4B0HvCfd6jywVOntnkVRO32XJAniRKtiB3XKz9o&usqp=CAU" width="50"/>
+      <div class="card-title">
+       Specialty 6
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Specialty icon" height="50" src="https://media.istockphoto.com/id/1464360962/vector/doctor-05.jpg?s=612x612&w=0&k=20&c=LK3XvPKOnWO8XRXGqdX2hTWkJRUBOlza91skiawbdnw=" width="50"/>
+      <div class="card-title">
+       < Specialty 7
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <div class="info-section">
+     <div class="info-text">
+      <h2>
+       Why Choose GUPTA Healthcare?
+      </h2>
+      <p>
+       With over 73 hospitals and a network of clinics, GUPTA Healthcare is one of the largest healthcare providers in the world. Our commitment to excellence and patient care is reflected in our state-of-the-art facilities and highly skilled medical professionals.
+      </p>
+      <ul>
+       <li>
+        <i class="fas fa-hospital">
+        </i>
+        73+ Hospitals
+       </li>
+       <li>
+        <i class="fas fa-clinic-medical">
+        </i>
+        2,300+ Diagnostic centers across India
+       </li>
+       <li>
+        <i class="fas fa-user-md">
+        </i>
+        10,000+ Beds
+       </li>
+       <li>
+        <i class="fas fa-briefcase-medical">
+        </i>
+        10,000+ Satisfied patients
+       </li>
+       <li>
+        <i class="fas fa-network-wired">
+        </i>
+        700+ Largest private network of clinics
+       </li>
+       <li>
+        <i class="fas fa-pills">
+        </i>
+        6,000+ Pharmacies
+       </li>
+       <li>
+        <i class="fas fa-user-nurse">
+        </i>
+        11,000+ Doctors
+       </li>
+      </ul>
+     </div>
+     <div class="info-image">
+      <img alt="Doctor consulting with a patient" height="350" src="https://media.istockphoto.com/id/1400053534/photo/young-patient-in-a-consult-with-his-doctor-african-american-doctor-showing-a-patient-their.jpg?s=612x612&w=0&k=20&c=rOkv0N_1p-_q7Hz3TDLfzx11CIjHQpGIai93OH_tztw=" width="350"/>
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <div class="section-title">
+     Hospitals In India
+    </div>
+    <div class="card-container">
+     <div class="card">
+      <img alt="Hospital icon" height="50" src="https://img.pristyncare.com/static_pages%2F07.jpg" width="50"/>
+      <div class="card-title">
+       Hospital 1
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Hospital icon" height="50" src="https://media.istockphoto.com/id/1344779917/vector/medical-center-hospital-building-vector-design.jpg?s=612x612&w=0&k=20&c=_sZByueZhEZbK2WjQz1jqXy1_Rr5jYkgiVBj-2ls44s=" width="50"/>
+      <div class="card-title">
+       Hospital 2
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Hospital icon" height="50" src="https://media.istockphoto.com/id/1364075546/photo/empty-corridor-in-modern-hospital-with-information-counter-and-hospital-bed-in-rooms-3d.jpg?s=612x612&w=0&k=20&c=xxFDmIVpH1wJaaiorpvfzec4RRggSb48PDb_dU9bTjo=" width="50"/>
+      <div class="card-title">
+       Hospital 3
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Hospital icon" height="50" src="https://t3.ftcdn.net/jpg/05/94/41/88/360_F_594418841_1gnBV2idgA46z87fHE7KhfhwoDPRs5tu.jpg" width="50"/>
+      <div class="card-title">
+       Hospital 4
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Hospital icon" height="50" src="https://images.unsplash.com/photo-1551076805-e1869033e561?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG9zcGl0YWx8ZW58MHx8MHx8fDA%3D" width="50"/>
+      <div class="card-title">
+       Hospital 5
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Hospital icon" height="50" src="https://ghealth121.com/wp-content/uploads/2021/12/Cardiologists.jpg" width="50"/>
+      <div class="card-title">
+       Hospital 6
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Hospital icon" height="50" src="https://c.stocksy.com/a/vAVB00/z9/2741449.jpg" width="50"/>
+      <div class="card-title">
+       Hospital 7
+      </div>
+     </div>
+
+        <div class="ppp">
+            <div class="header">
+             <h1>
+              International Patient Care
+             </h1>
+             <p>
+              Bringing wellness to the world with the best care and many accolades!
+             </p>
+             <div class="services">
+              <div class="service">
+               <i class="fas fa-hospital">
+               </i>
+               <p>
+                Hospitals
+               </p>
+              </div>
+              <div class="service">
+               <i class="fas fa-stethoscope">
+               </i>
+               <p>
+                Speciality
+               </p>
+              </div>
+              <div class="service">
+               <i class="fas fa-user-md">
+               </i>
+               <p>
+                Find Your Doctor
+               </p>
+              </div>
+              <div class="service">
+               <i class="fas fa-procedures">
+               </i>
+               <p>
+                Procedures
+               </p>
+              </div>
+              <div class="service">
+               <i class="fas fa-pills">
+               </i>
+               <p>
+                Pharmacy
+               </p>
+              </div>
+              <div class="service">
+               <i class="fas fa-video">
+               </i>
+               <p>
+                Video Consultation
+               </p>
+              </div>
+              <div class="service">
+               <i class="fas fa-phone">
+               </i>
+               <p>
+                Online Consultation
+               </p>
+              </div>
+              <div class="service">
+               <i class="fas fa-ambulance">
+               </i>
+               <p>
+                Ambulance Services
+               </p>
+              </div>
+             </div>
+             <div class="contact">
+              <button>
+               International Number: (+91) 40 4344 1066
+              </button>
+             </div>
+            </div>
+            <div class="news">
+             <h2>
+              What's new at GUPTA
+             </h2>
+             <div class="news-items">
+              <div class="news-item">
+               <img alt="News Image 1" height="200" src="https://www.dooper.in/Assets/HomepageHos02.png" width="300"/>
+               <p>
+                20 July 21
+               </p>
+               <p>
+                GUPTA Proton Cancer Institute Launches...
+               </p>
+               <a href="#">
+                Read More
+               </a>
+              </div>
+              <div class="news-item">
+               <img alt="News Image 2" height="200" src="https://www.practo.com/consumer-ui/_next/image?url=https%3A%2F%2Fimages1-fabric.practo.com%2Fzydus-hospital-ahmedabad-1474016214-57dbb3d64a171.jpg&w=3840&q=75" width="300"/>
+               <p>
+                20 July 21
+               </p>
+               <p>
+                GUPTA Hospitals, Chennai, Achieves a...
+               </p>
+               <a href="#">
+                Read More
+               </a>
+              </div>
+              <div class="news-item">
+               <img alt="News Image 3" height="200" src="https://s3-ap-south-1.amazonaws.com/images.hospals.com/hospitals/images/hospital-image-1736075127544.jpg" width="300"/>
+               <p>
+                18 July 21
+               </p>
+               <p>
+                The 9th GUPTA International Clinical...
+               </p>
+               <a href="#">
+                Read More
+               </a>
+              </div>
+             </div>
+            </div>
+            <div class="disclaimer">
+             <h2>
+              Disclaimer
+             </h2>
+             <div class="disclaimer-items">
+              <div class="disclaimer-item">
+               <img alt="Disclaimer Image 1" height="200" src="https://parkhospital.in/storage/app/public/images/LeBzz6Kbvua26MLL6KyTOb4m8cjofKRjvX3E2E4C.jpg" width="300"/>
+               <p>
+                Transplant Disclaimer
+               </p>
+               <p>
+                GUPTA Hospitals has been a pioneer in...
+               </p>
+               <a href="#">
+                Read More
+               </a>
+              </div>
+              <div class="disclaimer-item">
+               <img alt="Disclaimer Image 2" height="200" src="https://www.echo.net.au/wp-content/uploads/2021/06/Hospital-image.jpg" width="300"/>
+               <p>
+                Recruitment Disclaimer
+               </p>
+               <p>
+                GUPTA Hospitals has been a pioneer in...
+               </p>
+               <a href="#">
+                Read More
+               </a>
+              </div>
+             </div>
+            </div>
+            <div class="footer">
+             <h2>
+              What Would You Like To Do Today?
+             </h2>
+             <div class="actions">
+              <div class="action">
+               <i class="fas fa-calendar-check">
+               </i>
+               <p>
+                Book Appointment
+               </p>
+              </div>
+              <div class="action">
+               <i class="fas fa-comments">
+               </i>
+               <p>
+                Consult Online
+               </p>
+              </div>
+              <div class="action">
+               <i class="fas fa-pills">
+               </i>
+               <p>
+                Buy Medicines
+               </p>
+              </div>
+              <div class="action">
+               <i class="fas fa-file-medical">
+               </i>
+               <p>
+                Book Health Checkup
+               </p>
+              </div>
+              <div class="action">
+               <i class="fas fa-file-alt">
+               </i>
+               <p>
+                View Health Record
+               </p>
+              </div>
+             </div>
+             <div class="newsletter">
+              <h3>
+               Subscribe Our Newsletter
+              </h3>
+              <input placeholder="Enter your email" type="email"/>
+              <button>
+               Subscribe
+              </button>
+             </div>
+             <div class="links">
+              <div class="link">
+               Patient Care
+              </div>
+              <div class="link">
+               Clinical Excellence
+              </div>
+              <div class="link">
+               Medical Education
+              </div>
+              <div class="link">
+               Research
+              </div>
+              <div class="link">
+               Corporate
+              </div>
+              <div class="link">
+               About Us
+              </div>
+              <div class="link">
+               Contact Us
+              </div>
+             </div>
+            </div>
+           </div>
+    </div>
+    
+    <!-- <script>
+        
+      document.getElementById('search-toggle').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        const searchContainer = document.getElementById('search-container');
+        if (searchContainer.style.display === 'none') {
+            searchContainer.style.display = 'block'; // Show the search input below the patient link
+            searchContainer.style.display = 'block';
+        } else {
+            searchContainer.style.display = 'none'; // Hide the search input
+        }
+    });
+
+
+    </script> -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+</body>
+</html>
+
+
+

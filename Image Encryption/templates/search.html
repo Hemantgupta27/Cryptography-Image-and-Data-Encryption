@@ -1,0 +1,339 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Record Summary</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    
+   </head>
+<body>
+     <label for="visitId">Enter Visit ID:</label>
+        <input type="text" id="visitId">
+        <button onclick="fetchPatientData()">Fetch Data</button>
+    <div class="summary-container">
+       
+        <h1>Decrypted Patient Image</h1>
+        <img src="data:image/jpeg;base64,{{ image_data }}" alt="Decrypted Image" />
+
+        
+        <div class="summary-header">
+            <h1>Patient Record Summary</h1>
+            
+            <div class="summary-section">
+                <h2>Personal Information</h2>
+                <div class="summary-row">
+                    <div class="summary-label">First Name:</div>
+                    <div class="summary-value" id="firstName"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Last Name:</div>
+                    <div class="summary-value" id="lastName"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Date of Birth:</div>
+                    <div class="summary-value" id="dateOfBirth"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Blood Group:</div>
+                    <div class="summary-value" id="bloodGroup"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Gender:</div>
+                    <div class="summary-value" id="gender"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Contact No.:</div>
+                    <div class="summary-value" id="contactInfo"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">State:</div>
+                    <div class="summary-value" id="state"></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="summary-section">
+            <h2>Clinical Information</h2>
+            <div class="summary-row">
+                <div class="summary-label">Visit ID:</div>
+                <div class="summary-value" id="visitId"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Visit Date:</div>
+                <div class="summary-value" id="visitDate"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Visit Time:</div>
+                <div class="summary-value" id="visitTime"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Doctor Name:</div>
+                <div class="summary-value" id="doctorName"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Specialty:</div>
+                <div class="summary-value" id="specialty"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Diagnosis:</div>
+                <div class="summary-value" id="diagnosis"></div>
+            </div>
+            <div class="image-preview">
+                <h3>Decrypted Medical Report</h3>
+                <img src="data:image/jpeg;base64,{{ report_data }}" alt="Decrypted Report" />
+            </div>
+        </div>
+
+        
+        <div class="summary-section">
+            <h2>Medical History</h2>
+            <div class="summary-row">
+                <div class="summary-label">Past Medical Conditions:</div>
+                <div class="summary-value" id="medicalConditions"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Current Medications:</div>
+                <div class="summary-value" id="currentMedications"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Allergies:</div>
+                <div class="summary-value" id="allergies"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Immunization Records:</div>
+                <div class="summary-value" id="immunizations"></div>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <button onclick="window.location.href='input-form.html'">Return to Form</button>
+        </div>
+    </div>
+
+   
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Full-Size Image" />
+    </div>
+   
+    <script src="/static/js/script.js"></script>
+
+    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Record Summary</title>
+    <link rel="stylesheet" href="/static/css/search.css">
+</head>
+<body>
+    <!-- Input to enter Visit ID -->
+    <label for="visitId">Enter Visit ID:</label>
+    <input type="text" id="visitId">
+    <button onclick="fetchPatientData()">Fetch Data</button>
+
+    <div class="summary-container">
+        <!-- Decrypted Patient Image Section -->
+        <!-- <h1>Decrypted Patient Image</h1>
+        <img id="patientImage" src="" alt="Decrypted Image" /> -->
+
+        <!-- <h1>Decrypted Patient Image</h1> -->
+        <img id="patientImage" class="modal-trigger" src="https://via.placeholder.com/150"  />
+
+        <!-- Patient Record Summary Section -->
+        <div class="summary-header">
+            <h1>Patient Record Summary</h1>
+            
+            <!-- Personal Information Section -->
+            <div class="summary-section">
+                <h2>Personal Information</h2>
+                <div class="summary-row">
+                    <div class="summary-label">First Name:</div>
+                    <div class="summary-value" id="firstName"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Last Name:</div>
+                    <div class="summary-value" id="lastName"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Date of Birth:</div>
+                    <div class="summary-value" id="dateOfBirth"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Blood Group:</div>
+                    <div class="summary-value" id="bloodGroup"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Gender:</div>
+                    <div class="summary-value" id="gender"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">Contact No.:</div>
+                    <div class="summary-value" id="contactInfo"></div>
+                </div>
+                <div class="summary-row">
+                    <div class="summary-label">State:</div>
+                    <div class="summary-value" id="state"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clinical Information Section -->
+        <div class="summary-section">
+            <h2>Clinical Information</h2>
+            <div class="summary-row">
+                <div class="summary-label">Visit ID:</div>
+                <div class="summary-value" id="visitId"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Visit Date:</div>
+                <div class="summary-value" id="visitDate"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Visit Time:</div>
+                <div class="summary-value" id="visitTime"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Doctor Name:</div>
+                <div class="summary-value" id="doctorName"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Specialty:</div>
+                <div class="summary-value" id="specialty"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Diagnosis:</div>
+                <div class="summary-value" id="diagnosis"></div>
+            </div>
+
+            <!-- Medical Report Section -->
+            <div class="image-preview">
+                <h3>Decrypted Medical Report</h3>
+                <div id="medicalReportContainer">
+                    <img class="modal-trigger" src="https://via.placeholder.com/150" alt="Report Image 1" />
+                    <img class="modal-trigger" src="https://via.placeholder.com/150" alt="Report Image 2" />
+                    <!-- Dynamic images will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical History Section -->
+        <div class="summary-section">
+            <h2>Medical History</h2>
+            <div class="summary-row">
+                <div class="summary-label">Past Medical Conditions:</div>
+                <div class="summary-value" id="medicalConditions"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Current Medications:</div>
+                <div class="summary-value" id="currentMedications"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Allergies:</div>
+                <div class="summary-value" id="allergies"></div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Immunization Records:</div>
+                <div class="summary-value" id="immunizations"></div>
+            </div>
+        </div>
+
+        <!-- Button to return to input form -->
+        <div class="button-row">
+            <button onclick="window.location.href='{{ url_for('main') }}'">Return to Form</button>
+
+        </div>
+    </div>
+
+    <!-- Modal for displaying full-size image -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Full-Size Image" />
+    </div>
+
+    <script src="/static/js/search.js"></script>
+
+    <script>
+        // // JavaScript for Modal Handling
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     const modal = document.getElementById("imageModal");
+        //     const modalImage = document.getElementById("modalImage");
+        //     const patientImage = document.getElementById("patientImage");
+            
+        //     const closeModalButton = document.querySelector(".modal-close");
+
+        //     // Open the modal when the image is clicked
+        //     patientImage.addEventListener("click", () => {
+        //         modal.style.display = "flex"; // Show the modal
+        //         modalImage.src = patientImage.src; // Set the modal image source
+        //     });
+
+
+        //     // Close the modal when the close button is clicked
+        //     closeModalButton.addEventListener("click", () => {
+        //         modal.style.display = "none";
+        //     });
+
+        //     // Close the modal when clicking outside the image
+        //     modal.addEventListener("click", (event) => {
+        //         if (event.target === modal) {
+        //             modal.style.display = "none";
+        //         }
+        //     });
+        // });
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const patientImage = document.getElementById("patientImage");
+
+    // Function to open the modal for any image
+    const openModal = (imageSrc) => {
+        modal.style.display = "flex"; // Show the modal
+        modalImage.src = imageSrc; // Set the modal image source to the clicked image
+    };
+
+    // Open the modal when the patient image is clicked
+    patientImage.addEventListener("click", () => {
+        openModal(patientImage.src);
+    });
+
+    // Select all report images
+    const reportImages = document.querySelectorAll(".image-preview img");
+
+    // Open the modal when any report image is clicked
+    reportImages.forEach((image) => {
+        image.addEventListener("click", () => {
+            openModal(image.src);
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    const closeModalButton = document.querySelector(".modal-close");
+    closeModalButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Close the modal when clicking outside the image (on the modal background)
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+
+
+
+        
+    </script>
+</body>
+</html>

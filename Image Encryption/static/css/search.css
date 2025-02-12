@@ -1,0 +1,230 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input {
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Summary Container */
+.summary-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Styling for Decrypted Patient Image */
+#patientImage {
+    position: absolute; /* Allows positioning within the container */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    max-width: 150px; /* Limit the image size */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#patientImage:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+/* Section Styling */
+.summary-section {
+    margin-bottom: 20px;
+}
+
+.summary-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Row Styling */
+.summary-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Label and Value Adjustments */
+.summary-label {
+    font-weight: bold;
+    color: #555;
+    margin-right: 10px;
+    width: 150px; /* Adjust width for alignment */
+}
+
+.summary-value {
+    font-size: 16px;
+    color: #222;
+}
+
+.image-preview {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* Image Preview Section */
+.image-preview img {
+    max-width: 150px; /* Small size for initial display */
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+/* Hover effect on images */
+.image-preview img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+/* Modal for Fullscreen Image */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+/* Modal Close Button */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+/* Button Styling */
+.button-row {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Ensure modal closes when clicking outside the image */
+.modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Styling for return button */
+.button-row button {
+    background-color: #f43a09;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-row button:hover {
+    background-color: #d72e07;
+}
+
+/* General Styling for Report Images */
+.report-image {
+    max-width: 150px; /* Small size for initial display */
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.report-image:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+/* Styling for the Report Image Modal */
+.report-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.report-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+/* Modal Close Button for Report Image */
+.report-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.report-modal-close:hover {
+    transform: scale(1.2);
+}

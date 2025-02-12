@@ -1,0 +1,435 @@
+* {
+    box-sizing: inherit; /* Apply box-sizing to all elements */
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
+}
+
+/* Flex container for full page layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.navbar img {
+    height: 70px;
+}
+
+.menu {
+    display: flex; /* Flex to align items in a row */
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 700;
+    position: relative; /* Position for dropdowns */
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Change dropdown text color to black */
+.dropdown-content p {
+    color: black; /* Set text color to black */
+    margin: 0;
+    padding: 5px;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Change dropdown text color on hover */
+.dropdown-content p:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
+
+/* Show dropdown on hover */
+.menu-item:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Center content in full-screen hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #1a3b8b, #6ba4d9);
+    color: white;
+    flex-grow: 1; /* Ensure hero section grows to fill remaining space */
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+}
+
+/* Flexbox for module layout */
+
+
+.module {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.module:hover {
+    transform: scale(1.05);
+}
+
+.module h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.module ul li {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.section {
+    padding: 40px 0;
+}
+.section:nth-child(even) {
+    background-color: #eaf9ff;
+}
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.section-subtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #6c757d;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+}
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.info-text {
+    flex: 1;
+}
+.info-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.info-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+.info-text ul {
+    list-style: none;
+    padding: 0;
+}
+.info-text ul li {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+.info-text ul li i {
+    color: #007bff;
+    margin-right: 10px;
+}
+.info-image {
+    flex: 1;
+    text-align: center;
+}
+.info-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+.ppp {
+    width: 100%;
+    text-align: center;
+}
+.header, .disclaimer, .footer {
+    padding: 50px 0;
+}
+.header {
+    background-color: #E6F9FF;
+}
+.header h1 {
+    font-size: 2em;
+    color: #333;
+}
+.header p {
+    color: #666;
+}
+.header .services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.header .services .service {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header .services .service i {
+    font-size: 2em;
+    color: #00AEEF;
+}
+.header .services .service p {
+    margin: 10px 0 0;
+    color: #333;
+}
+.header .contact {
+    margin-top: 20px;
+}
+.header .contact button {
+    background-color: #00AEEF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.news, .disclaimer {
+    background-color: #fff;
+}
+.news h2, .disclaimer h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+.news .news-items, .disclaimer .disclaimer-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.news .news-items .news-item, .disclaimer .disclaimer-items .disclaimer-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.news .news-items .news-item img, .disclaimer .disclaimer-items .disclaimer-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.news .news-items .news-item p, .disclaimer .disclaimer-items .disclaimer-item p {
+    margin: 10px 0 0;
+    color: #333;
+}
+.footer {
+    background-color: #007B8F;
+    color: #fff;
+}
+.footer .actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.footer .actions .action {
+    background-color: #00AEEF;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    width: 150px;
+    text-align: center;
+}
+.footer .actions .action i {
+    font-size: 2em;
+}
+.footer .actions .action p {
+    margin: 10px 0 0;
+}
+.footer .newsletter {
+    margin-top: 20px;
+}
+.footer .newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.footer .newsletter button {
+    background-color: #00AEEF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.footer .links .link {
+    margin: 10px;
+    color: #fff;
+}   
+
+/* Ensure dropdown is positioned correctly */
+.menu-item {
+    position: relative; /* Make this position relative for absolute positioning of dropdown */
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+/* Show dropdown on hover */
+.menu-item:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Additional styles for dropdown items */
+.dropdown-content li {
+    list-style: none; /* Remove default list styles */
+}
+
+.dropdown-content a {
+    color: black; /* Set dropdown link text color */
+    padding: 10px 15px; /* Add padding for better spacing */
+    display: block; /* Make dropdown links block elements */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
+
+
+.menu-item {
+    position: relative; /* Set position relative for absolute positioning of dropdown */
+}
+
+#search-container {
+    position: absolute;
+    padding: 20px;
+    margin-left: 60px;
+    margin-top: 60px; /* Adjust the space between the menu and search */
+    display: none; /* Initially hidden */
+}
+
+#patient-search {
+    padding: 5px;
+    width: 200px; /* Adjust width as needed */
+    margin-right: 10px; /* Space between the input and button */
+}
+
+#search-button {
+    padding: 5px;
+}
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v={{ version }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=1"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Styling for the Forgot Password link */
+        .forgot-password {
+            margin-bottom: 10px; /* Space between Forgot Password link and Sign in button */
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .forgot-password a {
+            color: #00b894;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns content to the left */
+        }
+
+        button {
+            margin-top: 10px; /* Space between Forgot Password and the button */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <!-- Left content can go here -->
+        </div>
+        <div class="right">
+            <h2>Sign in</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+            
+            <div class="passw">
+                <input type="checkbox" id="show-password">
+                <div class="password">
+                    <label for="show-password">Show password</label>
+                    <!-- <a href="forgot-password.html">Forgot Password?</a> -->
+                </div>
+            </div>
+            <div class="forgot-password">
+                
+            </div>
+            <button onclick="validateAndSignIn()">Sign in →</button>
+        </div>
+    </div>
+
+    
+    <!-- <script>
+        document.getElementById('show-password').addEventListener('change', function() {
+            const passwordInput = document.getElementById('password');
+            passwordInput.type = this.checked ? 'text' : 'password';
+        });
+
+        function validateAndSignIn() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Validate username (you can add more criteria if needed)
+            if (username.trim() === '') {
+                alert('Please enter a valid username.');
+                return;
+            }
+
+            // Validate password length
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return;
+            }
+
+            // Check for uppercase letters
+            if (!/[A-Z]/.test(password)) {
+                alert('Password must contain at least one uppercase letter.');
+                return;
+            }
+
+            // Check for lowercase letters
+            if (!/[a-z]/.test(password)) {
+                alert('Password must contain at least one lowercase letter.');
+                return;
+            }
+
+            // Check for numbers
+            if (!/[0-9]/.test(password)) {
+                alert('Password must contain at least one number.');
+                return;
+            }
+
+            // Check for special characters
+            if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                alert('Password must contain at least one special character.');
+                return;
+            }
+
+
+
+
+            /// ***    VALIDATE HASES
+            async function validateAndSignIn() {
+            // Get username and password input values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (!username || !password) {
+                alert("Please enter both username and password.");
+                return;
+            }
+
+            // Send data to the backend
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert(result.message);
+                // Redirect to another page if login is successful
+                window.location.href = '/home';
+            } else {
+                alert(result.error);
+            }
+        }
+            
+        ////      COMPLETE HASES VALIDATION               ******
+
+            // If validation passes, go to the next page
+            window.location.href = 'Main.html'; // Change 'main.html' to the actual path of your home page
+        }
+    </script> -->
+</body>
+</html>

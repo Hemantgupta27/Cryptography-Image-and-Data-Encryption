@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Record Form</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/patient.css') }}?v=1">
+    <script src="{{ url_for('static', filename='js/patient.js') }}?v=1"></script>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/patient.css') }}?v={{ version }}">
+    <script src="{{ url_for('static', filename='js/patient.js') }}?v={{ version }}"></script>
+     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+
+        <style>
+        .hidden {
+            display: none;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fullscreen-form">
+        <h1>Patient Record Form</h1>
+        <form id="patientForm" action="{{ url_for('submit_form') }}" method="POST" enctype="multipart/form-data">
+            <!-- Personal Information Section -->
+            <div class="form-section" id="personal-info">
+                <h2>Personal Information</h2>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="patient-image">Patient Image:</label>
+                        <input type="file" id="patient-image" name="patient-image" accept="image/*">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date-of-birth">Date of Birth:</label>
+                        <input type="date" id="date-of-birth" name="date-of-birth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blood-group">Blood Group:</label>
+                        <select id="blood-group" name="blood-group" required>
+                            <option value="">Select</option>
+                            <option value="A+">A +</option>
+                            <option value="A-">A -</option>
+                            <option value="B+">B +</option>
+                            <option value="B-">B -</option>
+                            <option value="O+">O +</option>
+                            <option value="O-">O -</option>
+                            <option value="AB-">AB -</option>
+                            <option value="AB+">AB +</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-info">Contact No.:</label>
+                        <input type="text" id="contact-info" name="contact-info" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputState">State:</label>
+                        <select id="inputState" name="inputState" required>
+                            <option value="">Select State</option>
+                            <option value="AndraPradesh">Andra Pradesh</option>
+                            <option value="ArunachalPradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="HimachalPradesh">Himachal Pradesh</option>
+                            <option value="JammuKashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="MadyaPradesh">Madya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Orissa">Orissa</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="TamilNadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttaranchal">Uttaranchal</option>
+                            <option value="UttarPradesh">Uttar Pradesh</option>
+                            <option value="WestBengal">West Bengal</option>
+                            <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Lakshadeep">Lakshadeep</option>
+                            <option value="Pondicherry">Pondicherry</option>
+                        </select>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="inputDistrict">District:</label>
+                        <select id="inputDistrict" name="inputDistrict" required>
+                            <option value="">Select District</option>
+                        </select>
+                    </div> -->
+                    
+                </div>
+                <button type="button" onclick="showSection('clinical-info')">Next</button>
+            </div>
+
+            <!-- Clinical Information Section -->
+            <div class="form-section hidden" id="clinical-info">
+                <h2>Clinical Information</h2>
+                <div class="form-row">
+                    <div class="form-group id">
+                        <label for="visit-id">Visit ID:</label>
+                        <input style="width: 70%; font-weight: 500; font-size: 17px;" type="text" id="visit-id" name="visit-id" required>
+                    </div>
+                    <div class="form-group id">
+                        <label for="visit-date">Date:</label>
+                        <input style="width: 70%;" type="date" id="visit-date" name="visit-date" required>
+                    </div>
+                    <div class="form-group id">
+                        <label for="visit-time">Time:</label>
+                        <input style="width: 70%;" type="time" id="visit-time" name="visit-time" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group id">
+                        <label for="doctor">Doctor Name:</label>
+                        <select id="doctor" style="width: 60%;" name="doctor" required>
+                            <option value="">Select a Doctor</option>
+                            <option value="Dr. Sarah Thompson">Dr. Sarah Thompson</option>
+                            <option value="Dr. James Anderson">Dr. James Anderson</option>
+                            <option value="Dr. Emily Rodriguez">Dr. Emily Rodriguez</option>
+                            <option value="Dr. Michael Smith">Dr. Michael Smith</option>
+                            <option value="Dr. Priya Patel">Dr. Priya Patel</option>
+                            <option value="Dr. David Johnson">Dr. David Johnson</option>
+                            <option value="Dr. Laura Garcia">Dr. Laura Garcia</option>
+                            <option value="Dr. William Brown">Dr. William Brown</option>
+                            <option value="Dr. Anjali Mehta">Dr. Anjali Mehta</option>
+                            <option value="Dr. Robert Lee">Dr. Robert Lee</option>
+                        </select>
+                    </div>
+                    <div class="form-group id">
+                        <label for="specialty">Specialty:</label>
+                        <select id="specialty" name="specialty" required>
+                            <option value="">Select a Specialty</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="dermatology">Dermatology</option>
+                            <option value="General Medicine">General Medicine</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                            <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+                            <option value="Endocrinology">Endocrinology</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Oncology">Oncology</option>
+                            <option value="Gynecology">Gynecology</option>
+                            <option value="Ophthalmology">Ophthalmology</option>
+                            <!-- Add other specialties here -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group id">
+                        <label for="diagnosis">Diagnosis:</label>
+                        <textarea id="diagnosis" name="diagnosis" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group id">
+                    <label for="medical-report-images">Medical Report Images:</label>
+                    <input style="width: 50%; margin-left: 20px;" type="file" id="medical-report-images" name="medical-report-images" multiple accept="image/*" onchange="previewImages()">
+                    <div id="medical-report-images-preview" class="preview"></div>
+                </div>
+                <div class="button-row">
+                    <button type="button" onclick="showSection('personal-info')">Previous</button>
+                    <button type="button" onclick="showSection('medical-history')">Next</button>
+                </div>
+            </div>
+
+            <!-- Medical History Section -->
+            <div class="form-section hidden" id="medical-history">
+                <h2>Medical History</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="past-medical-conditions">Past Medical Conditions:</label>
+                        <textarea id="past-medical-conditions" name="past-medical-conditions" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="current-medications">Current Medications:</label>
+                        <textarea id="current-medications" name="current-medications" required></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="allergies">Allergies:</label>
+                        <textarea id="allergies" name="allergies" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="immunization-records">Immunization Records:</label>
+                        <textarea id="immunization-records" name="immunization-records" required></textarea>
+                    </div>
+                </div>
+                <div id="notification" class="notification" style="display: none;">Form submitted successfully!</div>
+                <div class="button-row">
+                    <button type="button" onclick="showSection('clinical-info')">Previous</button>
+                    <button type="submit" onclick="returnToForm()">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+</body>
+</html>

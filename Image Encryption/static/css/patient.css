@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Full height of the viewport */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Blurs the background image */
+    z-index: -1;
+}
+
+.fullscreen-form {
+    background: none; /* Removes the white background */
+    border-radius: 10px;
+    box-shadow: none; /* Removes shadow to show the background clearly */
+    width: 60%; /* Adjust width to fit the screen nicely */
+    max-width: 800px; /* Optional max width for larger screens */
+    margin: auto;
+    padding: 20px;
+    max-height: 90vh; /* Limit height to 90% of the viewport */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-section {
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Light background for form sections */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-right: 20px;
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque background for input fields */
+}
+
+input[type="file"] {
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+textarea {
+    height: 100px;
+}
+
+@media (max-width: 600px) {
+    .fullscreen-form {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-section {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+
+.form-section {
+    margin: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+    flex: 1; /* Allow the input groups to take equal space */
+    margin-right: 10px; /* Right margin for spacing */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove right margin from the last item */
+}
+
+textarea {
+    width: 100%; /* Make textarea full width */
+    height: 100px; /* Set a fixed height for the textarea */
+}
+
+.preview {
+    margin-top: 10px; /* Add margin for preview section */
+}
+
+.form-section {
+    margin: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+    flex: 1; /* Allow the input groups to take equal space */
+    margin-right: 10px; /* Right margin for spacing */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove right margin from the last item */
+}
+
+textarea {
+    width: 100%; /* Make textarea full width */
+    height: 100px; /* Set a fixed height for the textarea */
+}
+
+.preview {
+    margin-top: 10px; /* Add margin for preview section */
+}
+
+/* Additional styling for button rows */
+.button-row {
+    display: flex; /* Use flexbox for button layout */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 20px; /* Space above buttons */
+}
+
+
+button:first-child {
+    margin-right: 20px; /* Add space to the right of the Previous button */
+}
+
+button:last-child {
+    margin-left: 20px; /* Add space to the left of the Next button */
+}
+
+
+.notification {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px; /* Some padding */
+    position: fixed; /* Fixed position */
+    top: 20px; /* From the top */
+    right: 700px; /* From the right */
+    z-index: 1000; /* High z-index to be on top */
+    border-radius: 5px; /* Rounded corners */
+}
+.id{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

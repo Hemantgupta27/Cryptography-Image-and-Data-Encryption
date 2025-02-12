@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('images.jpg') no-repeat center center;
+    background-image: blur;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left {
+    background: url('mission.jpg') no-repeat center center/cover;
+    padding: 40px;
+    color: rgb(19, 9, 125);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.left h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.left h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.left p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.left a {
+    color: white;
+    text-decoration: underline;
+}
+
+.right {
+    padding: 40px;
+    width: 400px;
+}
+
+.right h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.right label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.right input[type="text"], /* Changed to apply to username input */
+.right input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.right input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.right button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.right .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.right .google-btn i {
+    margin-right: 10px;
+}
+
+.right .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.right .divider::before,
+.right .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.right .divider:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.right .divider:not(:empty)::after {
+    margin-left: .25em;
+}
+.password{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+}
+.passw{
+    display: flex;
+    width: 100%;
+    
+}
